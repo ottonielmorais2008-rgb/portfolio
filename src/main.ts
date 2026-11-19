@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-import { portraitUrl, workThumb } from './assets';
+import { portraitUrl, portraitUrl2x, workThumb } from './assets';
 import { FILTERS, getProject, projects, type FilterId } from './data/projects';
 import { socialPillsMarkup } from './ui/social-icons';
 import { journey } from './data/journey';
@@ -347,6 +347,8 @@ function initSocials(): void {
 function initPortrait(): void {
   const img = qs<HTMLImageElement>('#portrait-img');
   img.src = portraitUrl;
+  img.srcset = `${portraitUrl} 652w, ${portraitUrl2x} 1304w`;
+  img.sizes = img.getAttribute('sizes') || '(max-width: 800px) min(78vw, 340px), 800px';
   const figure = img.closest('.portrait');
   figure?.addEventListener('pointerenter', () => figure.classList.add('is-color'));
   figure?.addEventListener('pointerleave', () => figure.classList.remove('is-color'));
