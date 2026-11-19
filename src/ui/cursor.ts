@@ -1,5 +1,5 @@
 const HOVER_SELECTOR =
-  'a, button, .work-card, .skill-row, .journey-row, .portrait, [data-cursor="hover"]';
+  'a, button, .work-card, .skill-row, .journey-row, .portrait, .social-pill, [data-cursor="hover"]';
 
 export function prefersReducedMotion(): boolean {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches;

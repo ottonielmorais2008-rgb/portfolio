@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 import { portraitUrl, workThumb } from './assets';
 import { FILTERS, getProject, projects, type FilterId } from './data/projects';
+import { socialPillsMarkup } from './ui/social-icons';
 import { journey } from './data/journey';
 import { skills } from './data/skills';
 import { filterProjects } from './lib/filters';
@@ -336,6 +337,13 @@ function onHashChange(): void {
   void goTo(route, { section });
 }
 
+function initSocials(): void {
+  const markup = socialPillsMarkup();
+  document.querySelectorAll('.hero-socials, .footer-socials').forEach((list) => {
+    list.innerHTML = markup;
+  });
+}
+
 function initPortrait(): void {
   const img = qs<HTMLImageElement>('#portrait-img');
   img.src = portraitUrl;
@@ -346,6 +354,7 @@ function initPortrait(): void {
 
 function init(): void {
   initPortrait();
+  initSocials();
   renderFilters();
   renderWork();
   renderSkills();

@@ -2,7 +2,9 @@
 
 Personal site for selected work in AI, security and read-only crypto.
 
-**Live site:** [https://ottonielmorais2008-rgb.github.io/portfolio/](https://ottonielmorais2008-rgb.github.io/portfolio/)
+**Live site:** [https://ottoniel-morais.vercel.app](https://ottoniel-morais.vercel.app)
+
+Also available on [GitHub Pages](https://ottonielmorais2008-rgb.github.io/portfolio/).
 
 The page is a static Vite + TypeScript build with Lenis inertial scrolling and GSAP ScrollTrigger reveals. All copy is in English. There is no backend, no analytics and no secret material in the repository.
 
@@ -28,7 +30,7 @@ npm install
 npm run dev
 ```
 
-Then open the local address printed by Vite (it uses the `/portfolio/` base path). Run `npm test` for unit tests and `npm run build` for a production build. GitHub Actions runs the type check, tests and build on every push and pull request, and deploys `main` to GitHub Pages.
+Then open the local address printed by Vite (it uses the `/portfolio/` base path). Run `npm test` for unit tests and `npm run build` for a production build. GitHub Actions runs the type check, tests and build on every push and pull request, and deploys `main` to GitHub Pages. Pushes to `main` are also deployed to Vercel at the root path (`/`). The Vite `base` stays `/portfolio/` for local dev and GitHub Pages, and switches to `/` on Vercel.
 
 ## License
 
