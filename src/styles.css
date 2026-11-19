@@ -372,23 +372,28 @@ button:focus-visible {
 
 .hero-name {
   position: relative;
-  z-index: 0;
+  z-index: 2;
   grid-column: 1 / -1;
   grid-row: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 0.16em;
   font-weight: 800;
-  font-size: clamp(2.9rem, 14.5vw, 11.25rem);
-  line-height: 0.8;
+  font-size: clamp(2.4rem, 8.05vw, 8.25rem);
+  line-height: 0.82;
   letter-spacing: -0.055em;
   text-transform: uppercase;
   text-align: center;
-  padding-top: clamp(0.5rem, 2vh, 1.5rem);
+  white-space: nowrap;
+  padding-top: clamp(0.35rem, 1.4vh, 1rem);
   user-select: none;
   pointer-events: none;
 }
 
 .name-outline,
 .name-solid {
-  display: block;
+  display: inline-block;
 }
 
 .name-outline {
@@ -437,23 +442,24 @@ button:focus-visible {
   z-index: 1;
   margin: 0;
   width: auto;
-  height: min(82vh, calc(100dvh - var(--frame) * 2 - 5.25rem));
+  height: calc(100% - 4.4rem);
   transform: translateX(-50%);
   background: none;
   line-height: 0;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, #000 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 90%, transparent 100%);
 }
 
 .portrait img {
   width: auto;
-  height: 100%;
+  height: 140%;
   max-width: none;
   object-fit: contain;
-  object-position: bottom center;
+  object-position: top center;
   filter: grayscale(1) contrast(1.04);
   transition: filter 0.55s ease;
   background: none;
-  -webkit-mask-image: linear-gradient(to bottom, #000 90%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 90%, transparent 100%);
 }
 
 .portrait:hover img,
@@ -1085,7 +1091,14 @@ button:focus-visible {
   }
 
   .hero-name {
-    font-size: clamp(2.8rem, 16.5vw, 5.5rem);
+    display: block;
+    font-size: clamp(2.6rem, 15.5vw, 4.8rem);
+    white-space: normal;
+  }
+
+  .name-outline,
+  .name-solid {
+    display: block;
   }
 
   .name-outline {
@@ -1097,11 +1110,15 @@ button:focus-visible {
     left: auto;
     grid-column: 1;
     grid-row: 2;
-    width: min(88vw, 400px);
+    width: min(78vw, 340px);
     height: auto;
-    max-width: 88vw;
-    margin: -8.5rem auto 0;
+    max-width: 78vw;
+    max-height: 58vh;
+    margin: 0.35rem auto 0;
     transform: none;
+    overflow: visible;
+    -webkit-mask-image: linear-gradient(to bottom, #000 92%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 92%, transparent 100%);
   }
 
   .portrait img {
@@ -1109,6 +1126,7 @@ button:focus-visible {
     height: auto;
     max-width: 100%;
     margin: 0 auto;
+    object-position: center bottom;
   }
 
   .hero-left {
