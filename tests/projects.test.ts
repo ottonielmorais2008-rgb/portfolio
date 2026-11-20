@@ -12,15 +12,15 @@ const httpsUrl = /^https:\/\/[^\s]+$/;
 const allowed = new Set<string>(CATEGORIES);
 
 describe('featured project data', () => {
-  it('lists exactly six featured projects', () => {
-    expect(projects).toHaveLength(6);
+  it('lists exactly seven featured projects', () => {
+    expect(projects).toHaveLength(7);
   });
 
   it('uses unique slugs and titles', () => {
     const slugs = projects.map((p) => p.slug);
     const titles = projects.map((p) => p.title);
-    expect(new Set(slugs).size).toBe(6);
-    expect(new Set(titles).size).toBe(6);
+    expect(new Set(slugs).size).toBe(7);
+    expect(new Set(titles).size).toBe(7);
   });
 
   it('has the required fields, https links and allowed categories', () => {

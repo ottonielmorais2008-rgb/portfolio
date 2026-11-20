@@ -12,6 +12,15 @@ export const journeyHeading = '20+ projects shipped';
 
 export const journey: JourneyItem[] = [
   {
+    name: 'Solana Token Risk Checker',
+    type: 'Crypto / Security',
+    month: 'Nov 2026',
+    isoMonth: '2026-11',
+    repoUrl: 'https://github.com/ottonielmorais2008-rgb/solana-token-risk-checker',
+    liveUrl: 'https://solana-token-risk-checker.vercel.app',
+    thumbnails: ['solana-token-risk-checker.webp'],
+  },
+  {
     name: 'Vulnerability Tracker',
     type: 'Security',
     month: 'Nov 2026',

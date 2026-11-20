@@ -20,6 +20,19 @@ export const FILTERS: FilterId[] = ['All', 'AI', 'Security', 'Crypto'];
 
 export const projects: Project[] = [
   {
+    slug: 'solana-token-risk-checker',
+    title: 'Solana Token Risk Checker',
+    categories: ['Crypto', 'Security'],
+    stack: ['React', 'TypeScript', 'Vite', 'Solana RPC'],
+    summary: 'Read-only inspection of mint authority, freeze authority, holder concentration and Token-2022 extensions.',
+    description:
+      'Paste a Solana token mint address to see who can still mint, who can freeze accounts, how concentrated the supply is, and whether Token-2022 extensions add extra rules. Each check is rated Pass, Warn, Risk or Unknown. Missing or failed data is shown as Unknown, never as safe. There is no wallet connection and no signing. An optional explanation can be generated from the structured report.',
+    liveUrl: 'https://solana-token-risk-checker.vercel.app',
+    sourceUrl: 'https://github.com/ottonielmorais2008-rgb/solana-token-risk-checker',
+    thumbnail: 'solana-token-risk-checker.webp',
+    created: '2026-11',
+  },
+  {
     slug: 'ai-threat-modeler',
     title: 'AI Threat Modeler',
     categories: ['AI', 'Security'],

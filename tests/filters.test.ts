@@ -31,8 +31,8 @@ describe('matchesFilter', () => {
 });
 
 describe('filterProjects', () => {
-  it('returns all six projects for All', () => {
-    expect(filterProjects(projects, 'All')).toHaveLength(6);
+  it('returns all seven projects for All', () => {
+    expect(filterProjects(projects, 'All')).toHaveLength(7);
   });
 
   it('returns AI projects including the dual-tagged threat modeler', () => {
@@ -47,12 +47,12 @@ describe('filterProjects', () => {
 
   it('returns Security projects including the dual-tagged threat modeler', () => {
     const result = filterProjects(projects, 'Security').map((p) => p.slug);
-    expect(result).toEqual(['ai-threat-modeler', 'vuln-tracker']);
+    expect(result).toEqual(['solana-token-risk-checker', 'ai-threat-modeler', 'vuln-tracker']);
   });
 
-  it('returns only the wallet explorer for Crypto', () => {
+  it('returns the token risk checker and the wallet explorer for Crypto', () => {
     const result = filterProjects(projects, 'Crypto').map((p) => p.slug);
-    expect(result).toEqual(['wallet-explorer']);
+    expect(result).toEqual(['solana-token-risk-checker', 'wallet-explorer']);
   });
 
   it('does not mutate the original list', () => {
@@ -64,10 +64,10 @@ describe('filterProjects', () => {
 
 describe('countByFilter and isFilterId', () => {
   it('counts each known filter', () => {
-    expect(countByFilter(projects, 'All')).toBe(6);
+    expect(countByFilter(projects, 'All')).toBe(7);
     expect(countByFilter(projects, 'AI')).toBe(4);
-    expect(countByFilter(projects, 'Security')).toBe(2);
-    expect(countByFilter(projects, 'Crypto')).toBe(1);
+    expect(countByFilter(projects, 'Security')).toBe(3);
+    expect(countByFilter(projects, 'Crypto')).toBe(2);
   });
 
   it('accepts only known filter ids', () => {
