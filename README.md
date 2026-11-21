@@ -12,6 +12,8 @@ The page is a static Vite + TypeScript build with Lenis inertial scrolling and G
 
 | Project | Live | Source |
 | --- | --- | --- |
+| Browser Voice Assistant | [Demo](https://browser-voice-assistant.vercel.app) | [Repo](https://github.com/ottonielmorais2008-rgb/browser-voice-assistant) |
+| Solana Token Risk Checker | [Demo](https://solana-token-risk-checker.vercel.app) | [Repo](https://github.com/ottonielmorais2008-rgb/solana-token-risk-checker) |
 | AI Threat Modeler | [Demo](https://ai-threat-modeler.vercel.app) | [Repo](https://github.com/ottonielmorais2008-rgb/ai-threat-modeler) |
 | Hallucination Detector | [Demo](https://hallucination-detector-five.vercel.app) | [Repo](https://github.com/ottonielmorais2008-rgb/hallucination-detector) |
 | Vulnerability Tracker | [Demo](https://vuln-tracker-seven.vercel.app) | [Repo](https://github.com/ottonielmorais2008-rgb/vuln-tracker) |

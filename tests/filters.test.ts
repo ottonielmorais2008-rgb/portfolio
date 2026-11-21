@@ -31,13 +31,14 @@ describe('matchesFilter', () => {
 });
 
 describe('filterProjects', () => {
-  it('returns all seven projects for All', () => {
-    expect(filterProjects(projects, 'All')).toHaveLength(7);
+  it('returns all eight projects for All', () => {
+    expect(filterProjects(projects, 'All')).toHaveLength(8);
   });
 
   it('returns AI projects including the dual-tagged threat modeler', () => {
     const result = filterProjects(projects, 'AI').map((p) => p.slug);
     expect(result).toEqual([
+      'browser-voice-assistant',
       'ai-threat-modeler',
       'hallucination-detector',
       'text-to-sql-assistant',
@@ -64,8 +65,8 @@ describe('filterProjects', () => {
 
 describe('countByFilter and isFilterId', () => {
   it('counts each known filter', () => {
-    expect(countByFilter(projects, 'All')).toBe(7);
-    expect(countByFilter(projects, 'AI')).toBe(4);
+    expect(countByFilter(projects, 'All')).toBe(8);
+    expect(countByFilter(projects, 'AI')).toBe(5);
     expect(countByFilter(projects, 'Security')).toBe(3);
     expect(countByFilter(projects, 'Crypto')).toBe(2);
   });

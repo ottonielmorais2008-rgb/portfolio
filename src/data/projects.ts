@@ -20,6 +20,19 @@ export const FILTERS: FilterId[] = ['All', 'AI', 'Security', 'Crypto'];
 
 export const projects: Project[] = [
   {
+    slug: 'browser-voice-assistant',
+    title: 'Browser Voice Assistant',
+    categories: ['AI'],
+    stack: ['React', 'TypeScript', 'Vite', 'Gemini', 'Web Speech API'],
+    summary: 'Speak or type a question in the browser. Gemini answers, and the reply is read aloud.',
+    description:
+      'Click or hold the microphone to dictate a question, or type instead. A short history is sent to a serverless function that calls Gemini, and the reply is spoken with the Web Speech API. The interface includes a voice picker, a speaking rate, a stop button, and clear errors for a denied microphone, an unsupported browser, or an API limit. Speech recognition works best in Chrome; other browsers can use the text box.',
+    liveUrl: 'https://browser-voice-assistant.vercel.app',
+    sourceUrl: 'https://github.com/ottonielmorais2008-rgb/browser-voice-assistant',
+    thumbnail: 'browser-voice-assistant.webp',
+    created: '2026-11',
+  },
+  {
     slug: 'solana-token-risk-checker',
     title: 'Solana Token Risk Checker',
     categories: ['Crypto', 'Security'],
