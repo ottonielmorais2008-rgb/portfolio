@@ -12,6 +12,15 @@ export const journeyHeading = '20+ projects shipped';
 
 export const journey: JourneyItem[] = [
   {
+    name: 'Browser Voice Assistant',
+    type: 'AI',
+    month: 'Nov 2026',
+    isoMonth: '2026-11',
+    repoUrl: 'https://github.com/ottonielmorais2008-rgb/browser-voice-assistant',
+    liveUrl: 'https://browser-voice-assistant.vercel.app',
+    thumbnails: ['browser-voice-assistant.webp'],
+  },
+  {
     name: 'Solana Token Risk Checker',
     type: 'Crypto / Security',
     month: 'Nov 2026',

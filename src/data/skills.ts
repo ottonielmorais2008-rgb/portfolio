@@ -12,9 +12,9 @@ export const skills: SkillGroup[] = [
     summary:
       'I build compact AI tools with Gemini and the AI SDK, and I check them with evals so the output stays useful — threat models, grounded answers, text-to-SQL, and CV matching.',
     thumbnails: [
+      'browser-voice-assistant.webp',
       'ai-threat-modeler.webp',
       'hallucination-detector.webp',
-      'ai-cv-analyzer.webp',
     ],
   },
   {
