@@ -20,6 +20,19 @@ export const FILTERS: FilterId[] = ['All', 'AI', 'Security', 'Crypto'];
 
 export const projects: Project[] = [
   {
+    slug: 'crypto-flow-graph',
+    title: 'Crypto Flow Graph',
+    categories: ['Crypto', 'AI'],
+    stack: ['React', 'TypeScript', 'Vite', 'Bitcoin', 'Ethereum', 'Gemini'],
+    summary: 'Paste a Bitcoin or Ethereum address or transaction hash to see how funds move between addresses.',
+    description:
+      'The demo opens with a real Bitcoin payout already drawn as an interactive graph. Paste an address or transaction hash and the chain is detected automatically. Nodes are addresses, edges are transfers with amounts, and a click expands an address or opens the explorer. An optional button sends a compact summary of the visible graph to Gemini, which is told not to invent entity names. The app is read-only: there is no wallet connection and no signing. Bitcoin data comes from mempool.space; Ethereum address history comes from Blockscout, because a plain Ethereum RPC cannot list an address\'s transactions.',
+    liveUrl: 'https://crypto-flow-graph.vercel.app',
+    sourceUrl: 'https://github.com/ottonielmorais2008-rgb/crypto-flow-graph',
+    thumbnail: 'crypto-flow-graph.webp',
+    created: '2026-11',
+  },
+  {
     slug: 'browser-voice-assistant',
     title: 'Browser Voice Assistant',
     categories: ['AI'],
@@ -108,19 +121,6 @@ export const projects: Project[] = [
     liveUrl: 'https://wallet-explorer-ten.vercel.app',
     sourceUrl: 'https://github.com/ottonielmorais2008-rgb/wallet-explorer',
     thumbnail: 'wallet-explorer.webp',
-    created: '2026-11',
-  },
-  {
-    slug: 'ai-cv-analyzer',
-    title: 'AI CV Analyzer',
-    categories: ['AI'],
-    stack: ['Next.js', 'AI SDK', 'Gemini', 'Zod'],
-    summary: 'Paste a CV and a job description to get a match score, skill gaps and suggestions.',
-    description:
-      'Paste a CV and a job description. The app returns a match score, the skills that already fit, the ones that are missing, and concrete suggestions. Results are validated with a schema. Texts are not stored by the application.',
-    liveUrl: 'https://ai-cv-analyzer-pink.vercel.app',
-    sourceUrl: 'https://github.com/ottonielmorais2008-rgb/ai-cv-analyzer',
-    thumbnail: 'ai-cv-analyzer.webp',
     created: '2026-11',
   },
 ];
