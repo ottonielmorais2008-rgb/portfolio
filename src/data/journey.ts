@@ -12,6 +12,15 @@ export const journeyHeading = '20+ projects shipped';
 
 export const journey: JourneyItem[] = [
   {
+    name: 'Crypto Flow Graph',
+    type: 'Crypto / AI',
+    month: 'Nov 2026',
+    isoMonth: '2026-11',
+    repoUrl: 'https://github.com/ottonielmorais2008-rgb/crypto-flow-graph',
+    liveUrl: 'https://crypto-flow-graph.vercel.app',
+    thumbnails: ['crypto-flow-graph.webp'],
+  },
+  {
     name: 'Browser Voice Assistant',
     type: 'AI',
     month: 'Nov 2026',
