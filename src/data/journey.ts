@@ -12,6 +12,15 @@ export const journeyHeading = '20+ projects shipped';
 
 export const journey: JourneyItem[] = [
   {
+    name: 'Address Poisoning Detector',
+    type: 'Crypto / Security',
+    month: 'Nov 2026',
+    isoMonth: '2026-11',
+    repoUrl: 'https://github.com/ottonielmorais2008-rgb/address-poisoning-detector',
+    liveUrl: 'https://address-poisoning-detector.vercel.app',
+    thumbnails: ['address-poisoning-detector.webp'],
+  },
+  {
     name: 'Crypto Flow Graph',
     type: 'Crypto / AI',
     month: 'Nov 2026',

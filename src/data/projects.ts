@@ -20,6 +20,19 @@ export const FILTERS: FilterId[] = ['All', 'AI', 'Security', 'Crypto'];
 
 export const projects: Project[] = [
   {
+    slug: 'address-poisoning-detector',
+    title: 'Address Poisoning Detector',
+    categories: ['Crypto', 'Security', 'AI'],
+    stack: ['React', 'TypeScript', 'Vite', 'Ethereum', 'Blockscout', 'Gemini'],
+    summary: 'Paste an Ethereum address to find lookalike addresses, fake USDT/USDC tokens, zero-value and dust transfers planted in its history.',
+    description:
+      'Address poisoning tricks people into copying an attacker\'s address from their own history. The demo opens on a real address under an active campaign. The app reads recent ERC-20 transfers from the public Blockscout API and flags lookalike addresses (same first and last characters as a real counterparty), fake USDT/USDC tokens that use homoglyphs or invisible characters, zero-value and dust transfers, and the critical case where real funds went to a lookalike. Each warning shows the two addresses side by side with the copied characters highlighted and explains the risk in plain English. An optional button asks Gemini to explain a validated summary. It is read-only: no wallet, no signing, no keys.',
+    liveUrl: 'https://address-poisoning-detector.vercel.app',
+    sourceUrl: 'https://github.com/ottonielmorais2008-rgb/address-poisoning-detector',
+    thumbnail: 'address-poisoning-detector.webp',
+    created: '2026-11',
+  },
+  {
     slug: 'crypto-flow-graph',
     title: 'Crypto Flow Graph',
     categories: ['Crypto', 'AI'],
@@ -95,19 +108,6 @@ export const projects: Project[] = [
     liveUrl: 'https://vuln-tracker-seven.vercel.app',
     sourceUrl: 'https://github.com/ottonielmorais2008-rgb/vuln-tracker',
     thumbnail: 'vuln-tracker.webp',
-    created: '2026-11',
-  },
-  {
-    slug: 'text-to-sql-assistant',
-    title: 'Text-to-SQL Assistant',
-    categories: ['AI'],
-    stack: ['Next.js', 'AI SDK', 'Gemini', 'SQLite'],
-    summary: 'Ask a shop database questions in plain English. The SQL is validated and run read-only.',
-    description:
-      'Ask a question about a fictional shop (customers, products, orders). Gemini writes the SQL, the server validates it, and the query runs on a read-only database. Nothing is written to the data, and the assistant is scoped to that sample shop.',
-    liveUrl: 'https://text-to-sql-assistant-tau.vercel.app',
-    sourceUrl: 'https://github.com/ottonielmorais2008-rgb/text-to-sql-assistant',
-    thumbnail: 'text-to-sql-assistant.webp',
     created: '2026-11',
   },
   {

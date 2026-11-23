@@ -38,22 +38,22 @@ describe('filterProjects', () => {
   it('returns AI projects including the dual-tagged threat modeler', () => {
     const result = filterProjects(projects, 'AI').map((p) => p.slug);
     expect(result).toEqual([
+      'address-poisoning-detector',
       'crypto-flow-graph',
       'browser-voice-assistant',
       'ai-threat-modeler',
       'hallucination-detector',
-      'text-to-sql-assistant',
     ]);
   });
 
   it('returns Security projects including the dual-tagged threat modeler', () => {
     const result = filterProjects(projects, 'Security').map((p) => p.slug);
-    expect(result).toEqual(['solana-token-risk-checker', 'ai-threat-modeler', 'vuln-tracker']);
+    expect(result).toEqual(['address-poisoning-detector', 'solana-token-risk-checker', 'ai-threat-modeler', 'vuln-tracker']);
   });
 
-  it('returns the flow graph, the token risk checker and the wallet explorer for Crypto', () => {
+  it('returns the poisoning detector, the flow graph, the token risk checker and the wallet explorer for Crypto', () => {
     const result = filterProjects(projects, 'Crypto').map((p) => p.slug);
-    expect(result).toEqual(['crypto-flow-graph', 'solana-token-risk-checker', 'wallet-explorer']);
+    expect(result).toEqual(['address-poisoning-detector', 'crypto-flow-graph', 'solana-token-risk-checker', 'wallet-explorer']);
   });
 
   it('does not mutate the original list', () => {
@@ -67,8 +67,8 @@ describe('countByFilter and isFilterId', () => {
   it('counts each known filter', () => {
     expect(countByFilter(projects, 'All')).toBe(8);
     expect(countByFilter(projects, 'AI')).toBe(5);
-    expect(countByFilter(projects, 'Security')).toBe(3);
-    expect(countByFilter(projects, 'Crypto')).toBe(3);
+    expect(countByFilter(projects, 'Security')).toBe(4);
+    expect(countByFilter(projects, 'Crypto')).toBe(4);
   });
 
   it('accepts only known filter ids', () => {
