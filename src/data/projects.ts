@@ -20,6 +20,19 @@ export const FILTERS: FilterId[] = ['All', 'AI', 'Security', 'Crypto'];
 
 export const projects: Project[] = [
   {
+    slug: 'solana-aml-risk-flagger',
+    title: 'Solana AML Risk Flagger',
+    categories: ['Crypto', 'Security', 'AI'],
+    stack: ['React', 'TypeScript', 'Vite', 'Solana RPC', 'Gemini'],
+    summary: 'Paste a Solana address to flag fast in/out transfers, many small inbound payments, repeated counterparties and bursts of activity. Every flag is backed by a transaction signature.',
+    description:
+      'The demo opens on a real mainnet address whose recent public SOL transfers trigger the built-in heuristics. The app reads recent transactions from a free public RPC, with a fallback and retries, and flags funds that arrive and leave again quickly, many small inbound transfers from several counterparties, the same counterparty used over and over, and a sudden burst of activity. Every flag links to its evidence on Solana Explorer. An optional button asks Gemini to explain a validated summary of the alerts; the flags stand on their own without it. The app is read-only: no wallet, no signing, no keys. These are transparent patterns, not a finding of money laundering.',
+    liveUrl: 'https://solana-aml-risk-flagger.vercel.app',
+    sourceUrl: 'https://github.com/ottonielmorais2008-rgb/solana-aml-risk-flagger',
+    thumbnail: 'solana-aml-risk-flagger.webp',
+    created: '2026-11',
+  },
+  {
     slug: 'address-poisoning-detector',
     title: 'Address Poisoning Detector',
     categories: ['Crypto', 'Security', 'AI'],
@@ -108,19 +121,6 @@ export const projects: Project[] = [
     liveUrl: 'https://vuln-tracker-seven.vercel.app',
     sourceUrl: 'https://github.com/ottonielmorais2008-rgb/vuln-tracker',
     thumbnail: 'vuln-tracker.webp',
-    created: '2026-11',
-  },
-  {
-    slug: 'wallet-explorer',
-    title: 'Wallet Explorer',
-    categories: ['Crypto'],
-    stack: ['Next.js', 'TypeScript', 'JSON-RPC'],
-    summary: 'Read-only multichain wallet explorer for Ethereum, Base and Solana.',
-    description:
-      'Paste any public address. The chain is detected automatically: EVM addresses are looked up on Ethereum and Base, base58 addresses on Solana. The app is read-only — no wallet connection and no signing — and it uses free, keyless public endpoints.',
-    liveUrl: 'https://wallet-explorer-ten.vercel.app',
-    sourceUrl: 'https://github.com/ottonielmorais2008-rgb/wallet-explorer',
-    thumbnail: 'wallet-explorer.webp',
     created: '2026-11',
   },
 ];

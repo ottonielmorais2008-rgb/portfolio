@@ -54,7 +54,7 @@ describe('featured project data', () => {
   });
 
   it('looks up projects by slug and ignores unknown slugs', () => {
-    expect(getProject('wallet-explorer')?.title).toBe('Wallet Explorer');
+    expect(getProject('solana-aml-risk-flagger')?.title).toBe('Solana AML Risk Flagger');
     expect(getProject('missing')).toBeUndefined();
   });
 
