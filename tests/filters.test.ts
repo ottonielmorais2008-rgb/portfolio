@@ -9,12 +9,12 @@ import {
 
 describe('matchesFilter', () => {
   const threat = projects.find((p) => p.slug === 'ai-threat-modeler')!;
-  const wallet = projects.find((p) => p.slug === 'wallet-explorer')!;
+  const token = projects.find((p) => p.slug === 'solana-token-risk-checker')!;
   const hallu = projects.find((p) => p.slug === 'hallucination-detector')!;
 
   it('returns every project for All', () => {
     expect(matchesFilter(threat, 'All')).toBe(true);
-    expect(matchesFilter(wallet, 'All')).toBe(true);
+    expect(matchesFilter(token, 'All')).toBe(true);
   });
 
   it('matches a project in more than one category', () => {
@@ -24,9 +24,9 @@ describe('matchesFilter', () => {
   });
 
   it('excludes projects outside the filter', () => {
-    expect(matchesFilter(wallet, 'AI')).toBe(false);
+    expect(matchesFilter(token, 'AI')).toBe(false);
     expect(matchesFilter(hallu, 'Crypto')).toBe(false);
-    expect(matchesFilter(wallet, 'Crypto')).toBe(true);
+    expect(matchesFilter(token, 'Crypto')).toBe(true);
   });
 });
 
@@ -38,6 +38,7 @@ describe('filterProjects', () => {
   it('returns AI projects including the dual-tagged threat modeler', () => {
     const result = filterProjects(projects, 'AI').map((p) => p.slug);
     expect(result).toEqual([
+      'solana-aml-risk-flagger',
       'address-poisoning-detector',
       'crypto-flow-graph',
       'browser-voice-assistant',
@@ -48,12 +49,12 @@ describe('filterProjects', () => {
 
   it('returns Security projects including the dual-tagged threat modeler', () => {
     const result = filterProjects(projects, 'Security').map((p) => p.slug);
-    expect(result).toEqual(['address-poisoning-detector', 'solana-token-risk-checker', 'ai-threat-modeler', 'vuln-tracker']);
+    expect(result).toEqual(['solana-aml-risk-flagger', 'address-poisoning-detector', 'solana-token-risk-checker', 'ai-threat-modeler', 'vuln-tracker']);
   });
 
-  it('returns the poisoning detector, the flow graph, the token risk checker and the wallet explorer for Crypto', () => {
+  it('returns the AML flagger, the poisoning detector, the flow graph and the token risk checker for Crypto', () => {
     const result = filterProjects(projects, 'Crypto').map((p) => p.slug);
-    expect(result).toEqual(['address-poisoning-detector', 'crypto-flow-graph', 'solana-token-risk-checker', 'wallet-explorer']);
+    expect(result).toEqual(['solana-aml-risk-flagger', 'address-poisoning-detector', 'crypto-flow-graph', 'solana-token-risk-checker']);
   });
 
   it('does not mutate the original list', () => {
@@ -66,8 +67,8 @@ describe('filterProjects', () => {
 describe('countByFilter and isFilterId', () => {
   it('counts each known filter', () => {
     expect(countByFilter(projects, 'All')).toBe(8);
-    expect(countByFilter(projects, 'AI')).toBe(5);
-    expect(countByFilter(projects, 'Security')).toBe(4);
+    expect(countByFilter(projects, 'AI')).toBe(6);
+    expect(countByFilter(projects, 'Security')).toBe(5);
     expect(countByFilter(projects, 'Crypto')).toBe(4);
   });
 

@@ -12,6 +12,15 @@ export const journeyHeading = '20+ projects shipped';
 
 export const journey: JourneyItem[] = [
   {
+    name: 'Solana AML Risk Flagger',
+    type: 'Crypto / Security',
+    month: 'Nov 2026',
+    isoMonth: '2026-11',
+    repoUrl: 'https://github.com/ottonielmorais2008-rgb/solana-aml-risk-flagger',
+    liveUrl: 'https://solana-aml-risk-flagger.vercel.app',
+    thumbnails: ['solana-aml-risk-flagger.webp'],
+  },
+  {
     name: 'Address Poisoning Detector',
     type: 'Crypto / Security',
     month: 'Nov 2026',
