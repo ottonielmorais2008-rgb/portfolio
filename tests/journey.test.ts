@@ -19,7 +19,7 @@ const monthName: Record<string, string> = {
 
 describe('journey data', () => {
   it('lists twenty-four real repositories', () => {
-    expect(journey).toHaveLength(25);
+    expect(journey).toHaveLength(26);
     expect(journeyHeading).toBe('20+ projects shipped');
   });
 
