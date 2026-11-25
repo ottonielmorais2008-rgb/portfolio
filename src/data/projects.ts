@@ -20,6 +20,19 @@ export const FILTERS: FilterId[] = ['All', 'AI', 'Security', 'Crypto'];
 
 export const projects: Project[] = [
   {
+    slug: 'typed-agent-team',
+    title: 'Typed Multi-Agent Team',
+    categories: ['AI'],
+    stack: ['React', 'TypeScript', 'Vite', 'Zod', 'Gemini'],
+    summary: 'A supervisor routes a coding task through a Researcher, a Coder and a Reviewer. Every hand-off is validated with Zod.',
+    description:
+      'Type a coding task and watch the team work through it on a live timeline. The Researcher writes notes and acceptance checks, the Coder implements a single file, and the Reviewer either approves the work or sends it back with must-fix issues. The supervisor validates every payload against a Zod schema, retries once if the shape is wrong, and stops after two revisions. The live path calls Gemini from a serverless function; if the key is missing or the model fails, a deterministic demo team and a canned sample run still show the full loop.',
+    liveUrl: 'https://typed-agent-team.vercel.app',
+    sourceUrl: 'https://github.com/ottonielmorais2008-rgb/typed-agent-team',
+    thumbnail: 'typed-agent-team.webp',
+    created: '2026-11',
+  },
+  {
     slug: 'solana-aml-risk-flagger',
     title: 'Solana AML Risk Flagger',
     categories: ['Crypto', 'Security', 'AI'],
@@ -108,19 +121,6 @@ export const projects: Project[] = [
     liveUrl: 'https://hallucination-detector-five.vercel.app',
     sourceUrl: 'https://github.com/ottonielmorais2008-rgb/hallucination-detector',
     thumbnail: 'hallucination-detector.webp',
-    created: '2026-11',
-  },
-  {
-    slug: 'vuln-tracker',
-    title: 'Vulnerability Tracker',
-    categories: ['Security'],
-    stack: ['React', 'TypeScript', 'Vite', 'Supabase'],
-    summary: 'Track lab vulnerabilities by severity, status, owner and due date.',
-    description:
-      'Record findings against lab hosts, watch severity and status at a glance, and export a CSV. The live demo stores data in the browser; when you sign in, data can be saved in a free Supabase project. Filters, overdue logic and CVSS-to-severity mapping are covered by tests.',
-    liveUrl: 'https://vuln-tracker-seven.vercel.app',
-    sourceUrl: 'https://github.com/ottonielmorais2008-rgb/vuln-tracker',
-    thumbnail: 'vuln-tracker.webp',
     created: '2026-11',
   },
 ];

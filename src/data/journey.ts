@@ -12,6 +12,15 @@ export const journeyHeading = '20+ projects shipped';
 
 export const journey: JourneyItem[] = [
   {
+    name: 'Typed Multi-Agent Team',
+    type: 'AI',
+    month: 'Nov 2026',
+    isoMonth: '2026-11',
+    repoUrl: 'https://github.com/ottonielmorais2008-rgb/typed-agent-team',
+    liveUrl: 'https://typed-agent-team.vercel.app',
+    thumbnails: ['typed-agent-team.webp'],
+  },
+  {
     name: 'Solana AML Risk Flagger',
     type: 'Crypto / Security',
     month: 'Nov 2026',
