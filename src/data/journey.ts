@@ -12,6 +12,15 @@ export const journeyHeading = '20+ projects shipped';
 
 export const journey: JourneyItem[] = [
   {
+    name: 'AI Code Auditor',
+    type: 'AI / Security',
+    month: 'Nov 2026',
+    isoMonth: '2026-11',
+    repoUrl: 'https://github.com/ottonielmorais2008-rgb/ai-code-auditor',
+    liveUrl: 'https://ai-code-auditor-two.vercel.app',
+    thumbnails: ['ai-code-auditor.webp'],
+  },
+  {
     name: 'Typed Multi-Agent Team',
     type: 'AI',
     month: 'Nov 2026',
