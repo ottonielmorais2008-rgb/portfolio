@@ -20,6 +20,19 @@ export const FILTERS: FilterId[] = ['All', 'AI', 'Security', 'Crypto'];
 
 export const projects: Project[] = [
   {
+    slug: 'ai-code-auditor',
+    title: 'AI Code Auditor',
+    categories: ['AI', 'Security'],
+    stack: ['React', 'TypeScript', 'Vite', 'Zod', 'Gemini'],
+    summary: 'Paste source or a public GitHub file URL and get structured findings: line, severity, CWE and a suggested fix.',
+    description:
+      'The page opens on an intentionally vulnerable SQL-injection sample, with XSS, a hardcoded secret placeholder and path traversal available as well. Paste a snippet or a public GitHub file URL and the audit returns JSON validated with Zod: each finding has a line, a severity, a CWE id, an explanation and a suggested fix. The matching lines are highlighted in the source. The live path calls Gemini from a serverless function; if the key is missing or the model fails, deterministic demo findings still run. Public files are fetched server-side only from raw.githubusercontent.com, with a size limit. This is an educational demo, not a complete security review.',
+    liveUrl: 'https://ai-code-auditor-two.vercel.app',
+    sourceUrl: 'https://github.com/ottonielmorais2008-rgb/ai-code-auditor',
+    thumbnail: 'ai-code-auditor.webp',
+    created: '2026-11',
+  },
+  {
     slug: 'typed-agent-team',
     title: 'Typed Multi-Agent Team',
     categories: ['AI'],
@@ -110,19 +123,7 @@ export const projects: Project[] = [
     thumbnail: 'ai-threat-modeler.webp',
     created: '2026-11',
   },
-  {
-    slug: 'hallucination-detector',
-    title: 'Hallucination Detector',
-    categories: ['AI'],
-    stack: ['Next.js', 'AI SDK', 'Gemini', 'Zod'],
-    summary: 'Check an AI answer against a source text and flag unsupported claims.',
-    description:
-      'Paste a source text and an AI answer. Each sentence is labelled as supported, not supported, or contradicted by the source, with a short reason. The app is built with the AI SDK and Gemini, and the verdicts are validated against a schema so the result stays structured.',
-    liveUrl: 'https://hallucination-detector-five.vercel.app',
-    sourceUrl: 'https://github.com/ottonielmorais2008-rgb/hallucination-detector',
-    thumbnail: 'hallucination-detector.webp',
-    created: '2026-11',
-  },
+
 ];
 
 export const ALL_WORK_URL =
