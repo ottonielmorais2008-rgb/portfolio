@@ -8,19 +8,17 @@ import {
 } from '../src/lib/filters';
 
 describe('matchesFilter', () => {
-  const threat = projects.find((p) => p.slug === 'ai-threat-modeler')!;
-  const token = projects.find((p) => p.slug === 'solana-token-risk-checker')!;
   const auditor = projects.find((p) => p.slug === 'ai-code-auditor')!;
-
+  const token = projects.find((p) => p.slug === 'solana-token-risk-checker')!;
   it('returns every project for All', () => {
-    expect(matchesFilter(threat, 'All')).toBe(true);
+    expect(matchesFilter(auditor, 'All')).toBe(true);
     expect(matchesFilter(token, 'All')).toBe(true);
   });
 
   it('matches a project in more than one category', () => {
-    expect(matchesFilter(threat, 'AI')).toBe(true);
-    expect(matchesFilter(threat, 'Security')).toBe(true);
-    expect(matchesFilter(threat, 'Crypto')).toBe(false);
+    expect(matchesFilter(auditor, 'AI')).toBe(true);
+    expect(matchesFilter(auditor, 'Security')).toBe(true);
+    expect(matchesFilter(auditor, 'Crypto')).toBe(false);
   });
 
   it('excludes projects outside the filter', () => {
@@ -35,22 +33,22 @@ describe('filterProjects', () => {
     expect(filterProjects(projects, 'All')).toHaveLength(8);
   });
 
-  it('returns AI projects including the dual-tagged threat modeler', () => {
+  it('returns AI projects including the dual-tagged code auditor', () => {
     const result = filterProjects(projects, 'AI').map((p) => p.slug);
     expect(result).toEqual([
+      'calibrated-llm-judge',
       'ai-code-auditor',
       'typed-agent-team',
       'solana-aml-risk-flagger',
       'address-poisoning-detector',
       'crypto-flow-graph',
       'browser-voice-assistant',
-      'ai-threat-modeler',
     ]);
   });
 
-  it('returns Security projects including the dual-tagged threat modeler', () => {
+  it('returns Security projects including the dual-tagged code auditor', () => {
     const result = filterProjects(projects, 'Security').map((p) => p.slug);
-    expect(result).toEqual(['ai-code-auditor', 'solana-aml-risk-flagger', 'address-poisoning-detector', 'solana-token-risk-checker', 'ai-threat-modeler']);
+    expect(result).toEqual(['ai-code-auditor', 'solana-aml-risk-flagger', 'address-poisoning-detector', 'solana-token-risk-checker']);
   });
 
   it('returns the AML flagger, the poisoning detector, the flow graph and the token risk checker for Crypto', () => {
@@ -69,7 +67,7 @@ describe('countByFilter and isFilterId', () => {
   it('counts each known filter', () => {
     expect(countByFilter(projects, 'All')).toBe(8);
     expect(countByFilter(projects, 'AI')).toBe(7);
-    expect(countByFilter(projects, 'Security')).toBe(5);
+    expect(countByFilter(projects, 'Security')).toBe(4);
     expect(countByFilter(projects, 'Crypto')).toBe(4);
   });
 
