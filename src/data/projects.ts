@@ -20,6 +20,19 @@ export const FILTERS: FilterId[] = ['All', 'AI', 'Security', 'Crypto'];
 
 export const projects: Project[] = [
   {
+    slug: 'calibrated-llm-judge',
+    title: 'Calibrated LLM Judge',
+    categories: ['AI'],
+    stack: ['React', 'TypeScript', 'Vite', 'Zod', 'Gemini'],
+    summary: 'Label sample model responses, run a Gemini judge against an editable rubric, and measure agreement with accuracy and Cohen\'s kappa.',
+    description:
+      'The page opens on a bundled sample of fifty labelled responses, clearly marked as example data. You can edit the human scores or add a new labelled pair; labels stay in the browser. An editable rubric, including the pass threshold, is sent to Gemini in batches from a serverless function. The output is validated with Zod and retried once if the shape is wrong. The page then shows percent agreement, Cohen\'s kappa, a confusion matrix and a disagreement list. After you tweak the rubric and run the judge again, you can compare v1 with v2. If the key is missing or the model fails, precomputed demo scores still run.',
+    liveUrl: 'https://calibrated-llm-judge.vercel.app',
+    sourceUrl: 'https://github.com/ottonielmorais2008-rgb/calibrated-llm-judge',
+    thumbnail: 'calibrated-llm-judge.webp',
+    created: '2026-11',
+  },
+  {
     slug: 'ai-code-auditor',
     title: 'AI Code Auditor',
     categories: ['AI', 'Security'],
@@ -110,20 +123,6 @@ export const projects: Project[] = [
     thumbnail: 'solana-token-risk-checker.webp',
     created: '2026-11',
   },
-  {
-    slug: 'ai-threat-modeler',
-    title: 'AI Threat Modeler',
-    categories: ['AI', 'Security'],
-    stack: ['Next.js', 'AI SDK', 'Gemini', 'Zod'],
-    summary: 'STRIDE threat models and OWASP LLM Top 10 mapping for AI applications.',
-    description:
-      'Describe an AI application and generate a structured threat model: components and data flows, trust boundaries, every place untrusted text can enter the system, STRIDE threats with severity, a mapping to the OWASP Top 10 for LLM Applications (2025), and concrete mitigations. The report includes a Mermaid diagram and can be exported as Markdown. Ready-made examples keep the demo usable if the model is unavailable.',
-    liveUrl: 'https://ai-threat-modeler.vercel.app',
-    sourceUrl: 'https://github.com/ottonielmorais2008-rgb/ai-threat-modeler',
-    thumbnail: 'ai-threat-modeler.webp',
-    created: '2026-11',
-  },
-
 ];
 
 export const ALL_WORK_URL =

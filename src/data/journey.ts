@@ -12,6 +12,15 @@ export const journeyHeading = '20+ projects shipped';
 
 export const journey: JourneyItem[] = [
   {
+    name: 'Calibrated LLM Judge',
+    type: 'AI',
+    month: 'Nov 2026',
+    isoMonth: '2026-11',
+    repoUrl: 'https://github.com/ottonielmorais2008-rgb/calibrated-llm-judge',
+    liveUrl: 'https://calibrated-llm-judge.vercel.app',
+    thumbnails: ['calibrated-llm-judge.webp'],
+  },
+  {
     name: 'AI Code Auditor',
     type: 'AI / Security',
     month: 'Nov 2026',
