@@ -20,6 +20,19 @@ export const FILTERS: FilterId[] = ['All', 'AI', 'Security', 'Crypto'];
 
 export const projects: Project[] = [
   {
+    slug: 'erc8004-agent-explorer',
+    title: 'ERC-8004 Agent Explorer',
+    categories: ['Crypto', 'AI'],
+    stack: ['React', 'TypeScript', 'Vite', 'viem', 'Zod', 'Gemini'],
+    summary: 'Look up an ERC-8004 agent on Ethereum Sepolia or Base Sepolia and read its identity, registration file and reputation feedback.',
+    description:
+      'Enter an agent ID and pick Ethereum Sepolia or Base Sepolia. The app reads the official Identity Registry over a public RPC, with a fallback if one endpoint rate-limits, and shows the owner, agentURI and wallet. The registration file is fetched from ipfs, https or data URIs, validated with Zod, and local or private URLs are blocked. Reputation feedback is read from the official Reputation Registry. Example IDs were checked on-chain, and a short list of recent agents can be loaded. An optional button asks Gemini to summarize the data already on screen; if the model is unavailable, a local summary is used instead. The app is read-only: no wallet, no signing, no keys in the browser.',
+    liveUrl: 'https://erc8004-agent-explorer.vercel.app',
+    sourceUrl: 'https://github.com/ottonielmorais2008-rgb/erc8004-agent-explorer',
+    thumbnail: 'erc8004-agent-explorer.webp',
+    created: '2026-11',
+  },
+  {
     slug: 'calibrated-llm-judge',
     title: 'Calibrated LLM Judge',
     categories: ['AI'],
@@ -108,19 +121,6 @@ export const projects: Project[] = [
     liveUrl: 'https://browser-voice-assistant.vercel.app',
     sourceUrl: 'https://github.com/ottonielmorais2008-rgb/browser-voice-assistant',
     thumbnail: 'browser-voice-assistant.webp',
-    created: '2026-11',
-  },
-  {
-    slug: 'solana-token-risk-checker',
-    title: 'Solana Token Risk Checker',
-    categories: ['Crypto', 'Security'],
-    stack: ['React', 'TypeScript', 'Vite', 'Solana RPC'],
-    summary: 'Read-only inspection of mint authority, freeze authority, holder concentration and Token-2022 extensions.',
-    description:
-      'Paste a Solana token mint address to see who can still mint, who can freeze accounts, how concentrated the supply is, and whether Token-2022 extensions add extra rules. Each check is rated Pass, Warn, Risk or Unknown. Missing or failed data is shown as Unknown, never as safe. There is no wallet connection and no signing. An optional explanation can be generated from the structured report.',
-    liveUrl: 'https://solana-token-risk-checker.vercel.app',
-    sourceUrl: 'https://github.com/ottonielmorais2008-rgb/solana-token-risk-checker',
-    thumbnail: 'solana-token-risk-checker.webp',
     created: '2026-11',
   },
 ];

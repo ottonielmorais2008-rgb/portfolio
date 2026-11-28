@@ -12,6 +12,15 @@ export const journeyHeading = '20+ projects shipped';
 
 export const journey: JourneyItem[] = [
   {
+    name: 'ERC-8004 Agent Explorer',
+    type: 'Crypto / AI',
+    month: 'Nov 2026',
+    isoMonth: '2026-11',
+    repoUrl: 'https://github.com/ottonielmorais2008-rgb/erc8004-agent-explorer',
+    liveUrl: 'https://erc8004-agent-explorer.vercel.app',
+    thumbnails: ['erc8004-agent-explorer.webp'],
+  },
+  {
     name: 'Calibrated LLM Judge',
     type: 'AI',
     month: 'Nov 2026',
